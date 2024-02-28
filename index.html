@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal WebSite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d8e6a66264.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    
+    <div id="header">
+          <div class="container">
+            <div class="row">
+                <img src="imagesP/logo32.png" class="logo">
+                <nav>
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+            </div>
+            <div class="row-0">
+                <div class="header-col-1">
+                    <p>Web Developer</p>
+                    <h1>Hi, I'm Tariq </h1>
+                </div>
+                <div class="header-col-2">
+                    <img class="icon" src="imagesP/Table-pic3.jpg">
+                </div>
+            </div>
+            
+          </div>
+    </div>
+    <div id="about">
+        <!------about-->
+         <div class="container">
+            <div class="row-1">
+                <div class="about-col-1">
+                    <img src="imagesP/work4.jpg" class = "Table-pic">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="self-def">
+                        I am a dedicated computer science student with a passion for web development.
+                         I have a solid foundation in JavaScript, HTML and CSS, and I'm eager to apply my skills to help building websites.
+                          I prioritize staying abreast of the latest industry trends by continuously learning and exploring new technologies. 
+                          This approach ensures that my skills remain current and relevant in the ever-evolving field of web development.
+                           I’m excited about contributing to innovative projects and making a positive impact in the world of web development.
+                    </p>
+                    <div class="tab-titles ">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links " onclick="opentab('skills')">Skills</p>
+                    </div>
+                    <div class="tab-content active-tab" id="education">
+                        <ul>
+                            <li><span>Degree:</span><br>Studying at Qassim Universty for Bachelor in Computer Science</li>
+                            <li><span>Current GPA:</span><br> 4.83 out of 5</li>
+                            <li><span>Estimated Graduation time:</span><br> At the firsr quarter of 2025 </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="skills">
+                        <ul>
+                            <li><span>Programming Languages:</span><br>Java, Python, C++, JavaScript</li>
+                            <li><span>Soft Skills</span><br>Problem solving, team work and time management</li>
+                            <li><span>Version Control</span><br>Familiar with Git and GitHub for version control and collaborative coding</li>
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----portfolio---- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="imagesP/work81.png">
+                    <div class="layer">
+                        <h3>Weather App</h3>
+                        <p>A simple Application to show the weather for any city</p>
+                        <a href="https://github.com/c-Tariq/WeatherApp"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="imagesP/work92.png">
+                    <div class="layer">
+                        <h3>Youtube Clone</h3>
+                        <p>A static representation of Youtube main page,<br/> designed using HTML, and CSS</p>
+                        <a href="https://github.com/c-Tariq/YouTubeClone"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="imagesP/work41.png">
+                    <div class="layer">
+                        <h3>soon..</h3>
+                        <p></p>
+                        <!-- <a href=""><i class="fa-solid fa-link"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------contact-------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row-1">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-regular fa-envelope"></i> tariq.efx@gmail.com</p>
+                     <p> <i class="fa-solid fa-phone"></i> 0535745969</p>
+                     <div class="social-icons">
+                        <!-- <a href="https://twitter.com/Tariq_0111"><i class="fa-brands fa-x-twitter"></i></a> -->
+                        <a href="https://www.linkedin.com/in/tariq-al-samaani-361a37281/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/c-Tariq"><i class="fa-brands fa-github"></i></a>
+                     </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn" > Submit</button>
+                        
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+  
+    <script src="./script.js"></script>
+</body>
+</html>
