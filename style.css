@@ -308,6 +308,9 @@ form textarea {
   color: rgb(164, 231, 209);
   font-size: 30px;
 }
+.blur {
+  filter: blur(2px);
+}
 
 /* ---css for small screens */
 nav .fa-solid {
@@ -429,4 +432,6 @@ nav .fa-solid {
   .layer p {
     font-size: 4vw;
   }
+
+
 }
