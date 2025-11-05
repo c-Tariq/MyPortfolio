@@ -103,6 +103,8 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: flex-start;
+
 }
 .Table-pic {
   object-fit: cover;
@@ -184,7 +186,7 @@ nav ul li a:hover::after {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 220px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .work {
   border-radius: 10px;
