@@ -4,170 +4,198 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal WebSite</title>
+    <meta property="og:type" content="website">
+    <title>Tariq Al-Samaani | Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d8e6a66264.js" crossorigin="anonymous"></script>
-    
 </head>
 <body>
-    
-    <div id="header">
-          <div class="container">
-            <div class="row">
-                <img src="imagesP/logo32.png" class="logo">
-                <nav>
-                    <ul id="sidemenu">
-                        <li><a href="#header">Home</a></li>
+    <header id="top">
+        <div class="container">
+            <div class="nav-row">
+                <a class="brand" href="#top" aria-label="Go to top">
+                    <img src="imagesP/logo32.png" class="logo" alt="Tariq logo">
+                    <span class="brand-name">Tariq Al-Samaani</span>
+                </a>
+                <nav aria-label="Primary navigation">
+                    <ul id="sidemenu" class="nav-list">
+                        <li><a href="#top">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#portfolio">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                        <button class="icon-btn close-btn" aria-label="Close menu" onclick="closemenu()">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                     </ul>
-                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                    <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sidemenu" onclick="openmenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </nav>
             </div>
-            <div class="row-0">
-                <div class="header-col-1">
-                    <p>Software Developer</p>
-                    <h1>Hi, I'm Tariq </h1>
-                </div>
-                <div class="header-col-2">
-                    <img class="icon" src="imagesP/Table-pic3.jpg" style="  filter: blur(3px);">
-                </div>
-            </div>
-            
-          </div>
-    </div>
-    <div id="about">
-        <!------about-->
-         <div class="container">
-            <div class="row-1">
-                <div class="about-col-1">
-                    <img src="imagesP/work4.jpg" class = "Table-pic">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p class="self-def">
-                        A recent Computer Science graduate (First Class Honors) with a strong foundation in software 
-                        development and problem-solving. I put my skills into practice by building an AI-Powered 
-                        Meeting Management System as my final year project, where I developed the backend using 
-                        Express.js and PostgreSQL.I'm ready to design and develop software solutions that are efficient, scalable, and maintainable. 
+            <div class="hero">
+                <div class="hero-text">
+                    <p class="eyebrow">Software Developer</p>
+                    <h1>Hi, I'm Tariq</h1>
+                    <p class="lead">
+                        I build Software Solutions :)
                     </p>
-                    <div class="tab-titles ">
-                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
-                        <p class="tab-links " onclick="opentab('skills')">Skills</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="#portfolio">View Projects</a>
+                        <a class="btn ghost" href="#contact">Contact</a>
                     </div>
-                    <div class="tab-content active-tab" id="education">
-                        <ul>
-                            <li><span>Degree:</span><br> Bachelor's degree with First Class Honor in Computer Science from Qassim University</li>
-                            <li><span> GPA:</span><br> 4.85 out of 5</li>
-                            <li><span> Graduation Date:</span><br> Graduated in the second quarter of 2025 (June 1, 2025)</li>
-                            
-                        </ul>
-                    </div>
-                    <div class="tab-content" id="skills">
-                        <ul>
-                            <li><span>Programming Languages:</span><br>Java, Python, C++, JavaScript and SQL. </li>
-                            <li><span>Web Devlopment:</span><br>Nodejs, ExpressJs, NestJs, Django, Javascrip, HTML, CSS and familiarity with React</li>
-                            <li><span>Soft Skills</span><br>Problem solving, team work and time management</li>
-                            <li><span>Version Control</span><br>Excellent with Git and GitHub for version control and collaborative coding</li>
-                            
-                        </ul>
-                    </div>
-                    
+                </div>
+                <div class="hero-media">
+                    <img class="hero-img" src="imagesP/Table-pic3.jpg" alt="Tariq at a desk">
                 </div>
             </div>
         </div>
-    </div>
-    <!-- -----portfolio---- -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Projects’ Source Code</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img class="blur" src="imagesP/fyp3.png">
-                    <div class="layer">
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">About</p>
+                    <h2 class="sub-title">About Me</h2>
+                    <p class="section-desc">
+                        Recent Computer Science graduate (First Class Honors) with strong foundations in in software 
+                        development and problem-solving. I enjoy learning new technologies and building software solutions that are efficient, scalable, and maintainable. 
+                    </p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="imagesP/work4.jpg" class="Table-pic" alt="Working at a laptop">
+                    </div>
+                    <div class="about-content">
+    
+                        <div class="tab-titles">
+                            <button class="tab-links active-link" onclick="opentab('education')" aria-controls="education">Education</button>
+                            <button class="tab-links" onclick="opentab('skills')" aria-controls="skills">Skills</button>
+                        </div>
+                        <div class="tab-content active-tab" id="education" role="tabpanel">
+                            <ul>
+                                <li><span>Degree:</span><br> Bachelor's degree with First Class Honor in Computer Science from Qassim University</li>
+                                <li><span>GPA:</span><br> 4.85 out of 5</li>
+                                <li><span>Graduation Date:</span><br> Graduated in the second quarter of 2025 (June 1, 2025)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="skills" role="tabpanel">
+                            <ul>
+                                <li><span>Programming Languages:</span><br> Python, C++, JavaScript, SQL</li>
+                                <li><span>Web Development:</span><br> Node.js, Express.js, NestJS, Django, JavaScript, HTML, CSS, familiarity with React</li>
+                                <li><span>Databases:</span><br> PostgreSQL and MySQL</li>
+                                <li><span>Developer Tools:</span><br> Git, GitHub, Docker</li>
+                                <li><span>Soft Skills:</span><br> Problem solving, teamwork, time management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Work</p>
+                    <h2 class="sub-title">My Projects’ Source Code</h2>
+                    <p class="section-desc">Selected projects spanning AI, backend services, and modern web experiences.</p>
+                </div>
+                <article class="featured-project">
+                    <div class="featured-media">
+                        <img src="imagesP/fyp3.png" alt="AI meeting app preview">
+                    </div>
+                    <div class="featured-body">
+                        <p class="eyebrow">Flagship Work</p>
                         <h3>Final Year Project</h3>
-                        <p>Web application powered by AI to manage meetings offering a range of features and using AI to transcibe, summarize and provide task follow up in Arabic and English</p>
-                        <a href="https://github.com/c-Tariq/Final-Year-Project-MeetApp/"><i class="fa-brands fa-github"></i></a>
+                        <p class="featured-desc">
+                            AI-powered meeting platform that transcribes, summarizes, and tracks tasks in Arabic and English,
+                            built with Express.js, PostgreSQL, and integrated AI services.
+                        </p>
+                        <div class="featured-actions">
+                            <a class="btn primary" href="https://github.com/c-Tariq/Final-Year-Project-MeetApp/">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                <span>View Source</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="work">
-                    <img class="blur" src="imagesP/library.png">
-                    <div class="layer">
-                        <h3>Digital Library App</h3>
-                        <p>Book library app built with Node.js/Express featuring JWT auth, role control, and full CRUD support. </p>
-                        <a href="https://github.com/c-Tariq/Digital-library/"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="imagesP/work81.png">
-                    <div class="layer">
-                        <h3>Weather App</h3>
-                        <p>A simple weather application designed with JavaScript, HTML, and CSS, providing weather information for any city.</p>
-                        <a href="https://github.com/c-Tariq/WeatherApp"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
+                </article>
 
-
-                <div class="work">
-                    <img class="blur" src="imagesP/cipher.png">
-                    <div class="layer">
-                        <h3>Flask web application for secure file storage</h3>
-                        <p>This is a Flask-based web application for secure file storage. It allows users to register, log in, upload files (with encryption using AES), and later download or delete them</p>
-                        <a href="https://github.com/c-Tariq/MATH319-Cryptography-Theory-Project"><i class="fa-brands fa-github"></i></a>
-                    </div>
+                <div class="work-list" aria-label="Other projects">
+                    <article class="work-card">
+                        <img src="imagesP/library.png" alt="Digital library app preview">
+                        <div class="layer">
+                            <h3>Digital Library App</h3>
+                            <p>Node.js/Express library app with JWT auth, role control, and full CRUD support.</p>
+                            <a href="https://github.com/c-Tariq/Digital-library/" aria-label="Open Digital Library App on GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="imagesP/work81.png" alt="Weather app preview">
+                        <div class="layer">
+                            <h3>Weather App</h3>
+                            <p>Simple weather application built with JavaScript, HTML, and CSS.</p>
+                            <a href="https://github.com/c-Tariq/WeatherApp" aria-label="Open Weather App on GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="imagesP/cipher.png" alt="Secure file storage app preview">
+                        <div class="layer">
+                            <h3>Secure File Storage</h3>
+                            <p>Flask-based web app for encrypted file storage using AES with upload, download, and delete.</p>
+                            <a href="https://github.com/c-Tariq/MATH319-Cryptography-Theory-Project" aria-label="Open Secure File Storage on GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="imagesP/work92.png" alt="YouTube clone preview">
+                        <div class="layer">
+                            <h3>YouTube Clone</h3>
+                            <p>Static representation of the YouTube main page designed with HTML and CSS.</p>
+                            <a href="https://github.com/c-Tariq/YouTubeClone" aria-label="Open YouTube Clone on GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </article>
                 </div>
-                
-                <!-- <div class="work">
-                    <img class="blur" src="imagesP/nestjs.png">
-                    <div class="layer">
-                        <h3>NestJS backend for task management</h3>
-                        <p>Basic backend for task management developed using NestJS</p>
-                        <a href="https://github.com/c-Tariq/Nestjs-task-management-backend"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-left">
+                        <p class="eyebrow">Contact</p>
+                        <h2 class="sub-title">Contact Me</h2>
+                        <p><i class="fa-regular fa-envelope"></i> <a href="mailto:tariq.efx@gmail.com">tariq.efx@gmail.com</a></p>
+                        <p><i class="fa-solid fa-phone"></i> <a href="tel:+966535745969">0535745969</a></p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/tariq-al-samaani-361a37281/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/c-Tariq" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
-                </div> -->
-                 <div class="work">
-                    <img src="imagesP/work92.png">
-                    <div class="layer">
-                        <h3>Youtube Clone</h3>
-                        <p>A static representation of Youtube main page, designed using HTML, and CSS</p>
-                        <a href="https://github.com/c-Tariq/YouTubeClone"><i class="fa-brands fa-github"></i></a>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <label class="sr-only" for="name">Your Name</label>
+                            <input id="name" type="text" name="Name" placeholder="Your Name" required>
+                            <label class="sr-only" for="email">Your Email</label>
+                            <input id="email" type="email" name="Email" placeholder="Your Email" required>
+                            <label class="sr-only" for="message">Your Message</label>
+                            <textarea id="message" name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn primary">Submit</button>
+                            <span id="msg" role="status" aria-live="polite"></span>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- --------contact-------- -->
-    <div id="contact">
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="row-1">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p> <i class="fa-regular fa-envelope"></i> tariq.efx@gmail.com</p>
-                     <p> <i class="fa-solid fa-phone"></i> 0535745969</p>
-                     <div class="social-icons">
-                        <!-- <a href="https://twitter.com/Tariq_0111"><i class="fa-brands fa-x-twitter"></i></a> -->
-                        <a href="https://www.linkedin.com/in/tariq-al-samaani-361a37281/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/c-Tariq"><i class="fa-brands fa-github"></i></a>
-                     </div>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn" > Submit</button>
-                        
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
+            <p>© <span id="year"></span> Tariq Al-Samaani. All rights reserved.</p>
         </div>
+    </footer>
 
-    </div>
-
-  
     <script src="./script.js"></script>
 </body>
 </html>
