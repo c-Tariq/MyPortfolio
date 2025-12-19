@@ -3,7 +3,7 @@
 This is my personal portfolio website. I built it to keep all my projects, contact info, and technical skills in one place.
 
 ## What’s inside
-- **Intro:** Hero section with a quick summary.
+- **Intro:** intro section with a quick summary.
 - **About:** Education and skills tabs.
 - **Projects:** Featured Final Year Project plus other web apps.
 - **Contact:** Links and a working form.
