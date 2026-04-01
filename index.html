@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d8e6a66264.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header id="top">
         <div class="container">
@@ -30,7 +32,8 @@
                             <i class="fa-solid fa-xmark"></i>
                         </button>
                     </ul>
-                    <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sidemenu" onclick="openmenu()">
+                    <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false"
+                        aria-controls="sidemenu" onclick="openmenu()">
                         <i class="fa-solid fa-bars"></i>
                     </button>
                 </nav>
@@ -48,7 +51,78 @@
                     </div>
                 </div>
                 <div class="hero-media">
-                    <img class="hero-img" src="imagesP/Table-pic3.jpg" alt="Tariq at a desk">
+                    <svg class="hero-img" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Profile avatar" role="img">
+                        <defs>
+                            <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+                                <feGaussianBlur stdDeviation="6" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                            <filter id="halo" x="-60%" y="-60%" width="220%" height="220%">
+                                <feGaussianBlur stdDeviation="14" result="blur" />
+                                <feComponentTransfer in="blur">
+                                    <feFuncA type="linear" slope="0.35" />
+                                </feComponentTransfer>
+                                <feMerge>
+                                    <feMergeNode />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                            <radialGradient id="bgGrad" cx="50%" cy="45%" r="55%">
+                                <stop offset="0%" stop-color="#0f2e35" />
+                                <stop offset="100%" stop-color="#0a1e24" />
+                            </radialGradient>
+                            <radialGradient id="avatarFill" cx="50%" cy="45%" r="50%">
+                                <stop offset="0%" stop-color="#0f4c55" stop-opacity="0.2" />
+                                <stop offset="100%" stop-color="#031f29" stop-opacity="0.0" />
+                            </radialGradient>
+                            <style>
+                                .avatar-pulse {
+                                    animation: pulseGlow 3.6s ease-in-out infinite;
+                                }
+
+                                .avatar-halo {
+                                    animation: pulseGlow 3.6s ease-in-out infinite;
+                                    animation-delay: 0.4s;
+                                }
+
+                                @keyframes pulseGlow {
+
+                                    0%,
+                                    100% {
+                                        opacity: 1;
+                                    }
+
+                                    50% {
+                                        opacity: 0.65;
+                                    }
+                                }
+                            </style>
+                        </defs>
+
+                        <rect width="400" height="320" rx="16" fill="url(#bgGrad)" />
+                        <ellipse cx="200" cy="200" rx="120" ry="120" fill="url(#avatarFill)" />
+
+                        <!-- Halo layer -->
+                        <circle class="avatar-halo" cx="200" cy="145" r="70" fill="none" stroke="#7ae0cf"
+                            stroke-width="10" stroke-opacity="0.18" filter="url(#halo)" />
+                        <path class="avatar-halo" d="M 60 410 C 60 300, 115 255, 200 245 C 285 255, 340 300, 340 410"
+                            fill="none" stroke="#7ae0cf" stroke-width="10" stroke-opacity="0.18" stroke-linecap="round"
+                            filter="url(#halo)" />
+
+                        <!-- Main strokes -->
+                        <circle class="avatar-pulse" cx="200" cy="145" r="70" fill="none" stroke="#0f4c55"
+                            stroke-width="3.5" filter="url(#glow)" />
+                        <line class="avatar-pulse" x1="200" y1="215" x2="200" y2="245" stroke="#0f4c55"
+                            stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" />
+                        <path class="avatar-pulse" d="M 60 410 C 60 300, 115 255, 200 245 C 285 255, 340 300, 340 410"
+                            fill="none" stroke="#0f4c55" stroke-width="3.5" stroke-linecap="round"
+                            filter="url(#glow)" />
+                    </svg>
                 </div>
             </div>
         </div>
@@ -61,31 +135,36 @@
                     <p class="eyebrow">About</p>
                     <h2 class="sub-title">About Me</h2>
                     <p class="section-desc">
-                        Recent Computer Science graduate (First Class Honors) with strong foundations in in software 
-                        development and problem-solving. I enjoy learning new technologies and building software solutions that are efficient, scalable, and maintainable. 
+                        Computer Science graduate (First Class Honors) with a strong foundation in software
+                        development and problem solving.
                     </p>
                 </div>
                 <div class="about-grid">
                     <div class="about-image">
-                        <img src="imagesP/work4.jpg" class="Table-pic" alt="Working at a laptop">
+                        <img src="imagesP/work4.jpg" class="Table-pic" alt="Working at a laptop"
+                            style="filter: blur(8px);">
                     </div>
                     <div class="about-content">
-    
+
                         <div class="tab-titles">
-                            <button class="tab-links active-link" onclick="opentab('education')" aria-controls="education">Education</button>
+                            <button class="tab-links active-link" onclick="opentab('education')"
+                                aria-controls="education">Education</button>
                             <button class="tab-links" onclick="opentab('skills')" aria-controls="skills">Skills</button>
                         </div>
                         <div class="tab-content active-tab" id="education" role="tabpanel">
                             <ul>
-                                <li><span>Degree:</span><br> Bachelor's degree with First Class Honor in Computer Science from Qassim University</li>
+                                <li><span>Degree:</span><br> Bachelor's degree with First Class Honor in Computer
+                                    Science from Qassim University</li>
                                 <li><span>GPA:</span><br> 4.85 out of 5</li>
-                                <li><span>Graduation Date:</span><br> Graduated in the second quarter of 2025 (June 1, 2025)</li>
+                                <li><span>Graduation Date:</span><br> Graduated in the second quarter of 2025 (June 1,
+                                    2025)</li>
                             </ul>
                         </div>
                         <div class="tab-content" id="skills" role="tabpanel">
                             <ul>
                                 <li><span>Programming Languages:</span><br> Python, C++, JavaScript, SQL</li>
-                                <li><span>Web Development:</span><br> Node.js, Express.js, NestJS, Django, JavaScript, HTML, CSS, familiarity with React</li>
+                                <li><span>Web Development:</span><br> Node.js, Express.js, NestJS, Django, JavaScript,
+                                    HTML, CSS, familiarity with React</li>
                                 <li><span>Databases:</span><br> PostgreSQL and MySQL</li>
                                 <li><span>Developer Tools:</span><br> Git, GitHub, Docker</li>
                                 <li><span>Soft Skills:</span><br> Problem solving, teamwork, time management</li>
@@ -100,8 +179,7 @@
             <div class="container">
                 <div class="section-header">
                     <p class="eyebrow">Work</p>
-                    <h2 class="sub-title">My Projects’ Source Code</h2>
-                    <p class="section-desc">Selected projects spanning AI, backend services, and modern web experiences.</p>
+                    <h2 class="sub-title">My Projects</h2>
                 </div>
                 <article class="featured-project">
                     <div class="featured-media">
@@ -109,15 +187,43 @@
                     </div>
                     <div class="featured-body">
                         <p class="eyebrow">Flagship Work</p>
-                        <h3>Final Year Project</h3>
+                        <h3>AI-Powered Meeting Management System (Graduation Project)</h3>
                         <p class="featured-desc">
-                            AI-powered meeting platform that transcribes, summarizes, and tracks tasks in Arabic and English,
-                            built with Express.js, PostgreSQL, and integrated AI services.
+                            Designed and implemented the backend of an AI-driven meeting management platform to
+                            automate meeting workflows and improve team productivity.
+                            Integrated AI APIs to build automated pipelines for Arabic and English audio transcription
+                            and summarization, using prompt engineering to extract structured outputs such as
+                            recaps, decisions, and action items.
+                            <br><strong>Tech Stack:</strong> Node.js, Express.js, PostgreSQL.
+
                         </p>
                         <div class="featured-actions">
                             <a class="btn primary" href="https://github.com/c-Tariq/Final-Year-Project-MeetApp/">
                                 <i class="fa-brands fa-github" aria-hidden="true"></i>
                                 <span>View Source</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="featured-project">
+                    <div class="featured-media">
+                        <img src="imagesP/Nabeeh.png" alt="Nabeeh app preview">
+                    </div>
+                    <div class="featured-body">
+                        <p class="eyebrow">Personal Project</p>
+                        <h3>Arabic Conversational AI Reminder System (نبيه)</h3>
+                        <p class="featured-desc">
+                            Engineered a backend system that processes natural language messages into scheduled alerts
+                            via WhatsApp and Telegram.<br>
+                            Implemented time parsing and intent extraction handlers and prompt engineering logic with an
+                            LLM API to trigger accurate, automated user notifications.<br>
+                            <strong>Tech Stack:</strong> Node.js, Express.js, PostgreSQL.
+                        </p>
+                        <div class="featured-actions">
+                            <a class="btn primary" href="https://www.asknabeeh.com/">
+                                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                                <span>Live Demo</span>
                             </a>
                         </div>
                     </div>
@@ -129,7 +235,8 @@
                         <div class="layer">
                             <h3>Digital Library App</h3>
                             <p>Node.js/Express library app with JWT auth, role control, and full CRUD support.</p>
-                            <a href="https://github.com/c-Tariq/Digital-library/" aria-label="Open Digital Library App on GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://github.com/c-Tariq/Digital-library/"
+                                aria-label="Open Digital Library App on GitHub"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </article>
                     <article class="work-card">
@@ -137,25 +244,21 @@
                         <div class="layer">
                             <h3>Weather App</h3>
                             <p>Simple weather application built with JavaScript, HTML, and CSS.</p>
-                            <a href="https://github.com/c-Tariq/WeatherApp" aria-label="Open Weather App on GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://github.com/c-Tariq/WeatherApp" aria-label="Open Weather App on GitHub"><i
+                                    class="fa-brands fa-github"></i></a>
                         </div>
                     </article>
                     <article class="work-card">
                         <img src="imagesP/cipher.png" alt="Secure file storage app preview">
                         <div class="layer">
                             <h3>Secure File Storage</h3>
-                            <p>Flask-based web app for encrypted file storage using AES with upload, download, and delete.</p>
-                            <a href="https://github.com/c-Tariq/MATH319-Cryptography-Theory-Project" aria-label="Open Secure File Storage on GitHub"><i class="fa-brands fa-github"></i></a>
+                            <p>Flask-based web app for encrypted file storage using AES with upload, download, and
+                                delete.</p>
+                            <a href="https://github.com/c-Tariq/MATH319-Cryptography-Theory-Project"
+                                aria-label="Open Secure File Storage on GitHub"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </article>
-                    <article class="work-card">
-                        <img src="imagesP/work92.png" alt="YouTube clone preview">
-                        <div class="layer">
-                            <h3>YouTube Clone</h3>
-                            <p>Static representation of the YouTube main page designed with HTML and CSS.</p>
-                            <a href="https://github.com/c-Tariq/YouTubeClone" aria-label="Open YouTube Clone on GitHub"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                    </article>
+
                 </div>
             </div>
         </section>
@@ -166,11 +269,14 @@
                     <div class="contact-left">
                         <p class="eyebrow">Contact</p>
                         <h2 class="sub-title">Contact Me</h2>
-                        <p><i class="fa-regular fa-envelope"></i> <a href="mailto:tariq.efx@gmail.com">tariq.efx@gmail.com</a></p>
+                        <p><i class="fa-regular fa-envelope"></i> <a
+                                href="mailto:tariq.efx@gmail.com">tariq.efx@gmail.com</a></p>
                         <p><i class="fa-solid fa-phone"></i> <a href="tel:+966535745969">0535745969</a></p>
                         <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/tariq-al-samaani-361a37281/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/c-Tariq" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/tariq-al-samaani-361a37281/" aria-label="LinkedIn"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/c-Tariq" aria-label="GitHub"><i
+                                    class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
                     <div class="contact-right">
@@ -198,4 +304,5 @@
 
     <script src="./script.js"></script>
 </body>
+
 </html>
