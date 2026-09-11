@@ -406,7 +406,7 @@ main section {
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: saturate(1.05);
+  filter: saturate(1.05) blur(3px);
   opacity: 60%;
 }
 
@@ -474,6 +474,7 @@ main section {
   display: block;
   border-bottom: 1px solid var(--border);
   opacity: 60%;
+  filter: blur(3px);
 }
 
 .layer {
@@ -586,6 +587,12 @@ main section {
   background: linear-gradient(135deg, #76b900, #5a8e00);
   color: #fff;
   box-shadow: 0 8px 18px rgba(118, 185, 0, 0.3);
+}
+
+.cert-org-badge.sdaia {
+  background: linear-gradient(135deg, #1b4f72, #0e7c7b);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(14, 124, 123, 0.3);
 }
 
 .cert-body {
@@ -811,6 +818,7 @@ form textarea {
 }
 
 @media (max-width: 900px) {
+
   .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
