@@ -406,7 +406,7 @@ main section {
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: saturate(1.05) blur(3px);
+  filter: saturate(1.05) blur(4px);
   opacity: 60%;
 }
 
@@ -474,7 +474,7 @@ main section {
   display: block;
   border-bottom: 1px solid var(--border);
   opacity: 60%;
-  filter: blur(3px);
+  filter: blur(4px);
 }
 
 .layer {
